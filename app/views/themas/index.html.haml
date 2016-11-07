@@ -19,110 +19,17 @@
   .main__body
     .main__body--raw.clearfix
       .main__body--raw-box
-        .main__body--raw-box-panel
-          .main__body--raw-box-panel-firstName マクドナルド
-          .main__body--raw-box-panel-vs vs
-          .main__body--raw-box-panel-secondName スターバックス
-          .main__body--raw-box-panel-firstName
-          .main__body--raw-box-panel-secondName
-          .main__body--raw-box-panel-firstChart 0
-          .main__body--raw-box-panel-secondChart 0
-        .main__body--raw-box-panel
-          .main__body--raw-box-panel-firstName マクドナルド
-          .main__body--raw-box-panel-vs vs
-          .main__body--raw-box-panel-secondName スターバックス
-          .main__body--raw-box-panel-firstName
-          .main__body--raw-box-panel-secondName
-          .main__body--raw-box-panel-firstChart 0
-          .main__body--raw-box-panel-secondChart 0
-        .main__body--raw-box-panel
-          .main__body--raw-box-panel-firstName マクドナルド
-          .main__body--raw-box-panel-vs vs
-          .main__body--raw-box-panel-secondName スターバックス
-          .main__body--raw-box-panel-firstName
-          .main__body--raw-box-panel-secondName
-          .main__body--raw-box-panel-firstChart 0
-          .main__body--raw-box-panel-secondChart 0
-        .main__body--raw-box-panel
-          .main__body--raw-box-panel-firstName マクドナルド
-          .main__body--raw-box-panel-vs vs
-          .main__body--raw-box-panel-secondName スターバックス
-          .main__body--raw-box-panel-firstName
-          .main__body--raw-box-panel-secondName
-          .main__body--raw-box-panel-firstChart 0
-          .main__body--raw-box-panel-secondChart 0
-        .main__body--raw-box-panel
-          .main__body--raw-box-panel-firstName マクドナルド
-          .main__body--raw-box-panel-vs vs
-          .main__body--raw-box-panel-secondName スターバックス
-          .main__body--raw-box-panel-firstName
-          .main__body--raw-box-panel-secondName
-          .main__body--raw-box-panel-firstChart 0
-          .main__body--raw-box-panel-secondChart 0
-        .main__body--raw-box-panel
-          .main__body--raw-box-panel-firstName マクドナルド
-          .main__body--raw-box-panel-vs vs
-          .main__body--raw-box-panel-secondName スターバックス
-          .main__body--raw-box-panel-firstName
-          .main__body--raw-box-panel-secondName
-          .main__body--raw-box-panel-firstChart 0
-          .main__body--raw-box-panel-secondChart 0
-        .main__body--raw-box-panel
-          .main__body--raw-box-panel-firstName マクドナルド
-          .main__body--raw-box-panel-vs vs
-          .main__body--raw-box-panel-secondName スターバックス
-          .main__body--raw-box-panel-firstName
-          .main__body--raw-box-panel-secondName
-          .main__body--raw-box-panel-firstChart 0
-          .main__body--raw-box-panel-secondChart 0
-        .main__body--raw-box-panel
-          .main__body--raw-box-panel-firstName マクドナルド
-          .main__body--raw-box-panel-vs vs
-          .main__body--raw-box-panel-secondName スターバックス
-          .main__body--raw-box-panel-firstName
-          .main__body--raw-box-panel-secondName
-          .main__body--raw-box-panel-firstChart 0
-          .main__body--raw-box-panel-secondChart 0
-        .main__body--raw-box-panel
-          .main__body--raw-box-panel-firstName マクドナルド
-          .main__body--raw-box-panel-vs vs
-          .main__body--raw-box-panel-secondName スターバックス
-          .main__body--raw-box-panel-firstName
-          .main__body--raw-box-panel-secondName
-          .main__body--raw-box-panel-firstChart 0
-          .main__body--raw-box-panel-secondChart 0
-        .main__body--raw-box-panel
-          .main__body--raw-box-panel-firstName マクドナルド
-          .main__body--raw-box-panel-vs vs
-          .main__body--raw-box-panel-secondName スターバックス
-          .main__body--raw-box-panel-firstName
-          .main__body--raw-box-panel-secondName
-          .main__body--raw-box-panel-firstChart 0
-          .main__body--raw-box-panel-secondChart 0
-        .main__body--raw-box-panel
-          .main__body--raw-box-panel-firstName マクドナルド
-          .main__body--raw-box-panel-vs vs
-          .main__body--raw-box-panel-secondName スターバックス
-          .main__body--raw-box-panel-firstName
-          .main__body--raw-box-panel-secondName
-          .main__body--raw-box-panel-firstChart 0
-          .main__body--raw-box-panel-secondChart 0
-        .main__body--raw-box-panel
-          .main__body--raw-box-panel-firstName マクドナルド
-          .main__body--raw-box-panel-vs vs
-          .main__body--raw-box-panel-secondName スターバックス
-          .main__body--raw-box-panel-firstName
-          .main__body--raw-box-panel-secondName
-          .main__body--raw-box-panel-firstChart 0
-          .main__body--raw-box-panel-secondChart 0
-        .main__body--raw-box-panel
-          .main__body--raw-box-panel-firstName マクドナルド
-          .main__body--raw-box-panel-vs vs
-          .main__body--raw-box-panel-secondName スターバックス
-          .main__body--raw-box-panel-firstName
-          .main__body--raw-box-panel-secondName
-          .main__body--raw-box-panel-firstChart 0
-          .main__body--raw-box-panel-secondChart 0
+        - @themas.each do |thema|
+          .main__body--raw-box-panel
+            .main__body--raw-box-panel-firstName 
+              =thema.first_name
+            .main__body--raw-box-panel-vs vs
+            .main__body--raw-box-panel-secondName 
+              =thema.second_name
+            .main__body--raw-box-panel-firstChart 0
+            .main__body--raw-box-panel-secondChart 0
+
+
     .pagination
 
   .main__footer

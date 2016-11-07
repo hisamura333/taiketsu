@@ -1,6 +1,7 @@
 class ThemasController < ApplicationController
   def index
     @thema = Thema.new
+    @themas = Thema.all
   end
   def show
     @thema = Thema.new
