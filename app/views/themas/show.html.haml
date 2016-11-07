@@ -6,15 +6,35 @@
 
   .body
     .upper_themas.clearfix
-      =link_to thema_path(@thema)do
-        .past__thema 
-          %i.fa.fa-arrow-circle-left
-          aaa vs bbb
-      =link_to thema_path(@thema)do
-        .next__thema 
-          111 vs 222
-          %i.fa.fa-arrow-circle-right
-        
+      - if @thema.previous.present?&& @thema.next.present?
+        =link_to thema_path(@thema.previous.id)do
+          .past__thema 
+            %i.fa.fa-arrow-circle-left
+            =@thema.previous.first_name
+            vs
+            =@thema.previous.second_name
+        =link_to thema_path(@thema.next.id)do
+          .next__thema 
+            =@thema.next.first_name
+            vs
+            =@thema.next.second_name
+            %i.fa.fa-arrow-circle-right
+      - elsif @thema.previous.id.nil?
+        =link_to thema_path(@thema.previous.id)do
+          .past__thema 
+            %i.fa.fa-arrow-circle-left
+            =@thema.previous.first_name
+            vs
+            =@thema.previous.second_name
+      - elsif @thema.next.id.nil?
+        =link_to thema_path(@thema.next.id)do
+          .next__thema 
+            =@thema.next.first_name
+            vs
+            =@thema.next.second_name
+            %i.fa.fa-arrow-circle-right
+
+
 
     .body__header
       .body__header__box
@@ -53,7 +73,7 @@
             .body__main__left__panel__comment__bad 
               %i.fa.fa-thumbs-o-down (0)
 
-          = form_for @hema do |f|
+          = form_for @thema do |f|
             .body__main__left__panel__post
             = f.text_area :id ,class: "text_area"
             = f.submit :意見を投稿する,class: "body__main__left__panel__buttun"
@@ -78,9 +98,9 @@
               %i.fa.fa-thumbs-o-down (0)
 
           = form_for @thema do |f|
-            .body__main__left__panel__post
+            .body__main__right__panel__post
             = f.text_area :id,class: "text_area"
-            = f.submit :意見を投稿する,class: "body__main__left__panel__buttun"
+            = f.submit :意見を投稿する,class: "body__main__right__panel__buttun"
 
 
         投稿できるご意見は200文字以内です。
