@@ -5,14 +5,15 @@ class ThemasController < ApplicationController
   end
   def show
     @thema = Thema.find(params[:id])
+    @review = Review.new
   end
   def create
-    @thema = Thema.create(create_params)
+    @thema = Thema.create(thema_params)
     redirect_to root_path
   end
 
   private
-  def create_params
+  def thema_params
     params.require(:thema).permit(:first_name,:second_name)
   end
 end

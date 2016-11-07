@@ -73,9 +73,9 @@
             .body__main__left__panel__comment__bad 
               %i.fa.fa-thumbs-o-down (0)
 
-          = form_for @thema do |f|
+          = form_for [@thema,@review] do |f|
             .body__main__left__panel__post
-            = f.text_area :id ,class: "text_area"
+            = f.text_area :first_body ,class: "text_area"
             = f.submit :意見を投稿する,class: "body__main__left__panel__buttun"
 
       .body__main__right
@@ -97,9 +97,9 @@
             .body__main__right__panel__comment__bad 
               %i.fa.fa-thumbs-o-down (0)
 
-          = form_for @thema do |f|
+          = form_for [@thema,@review] do |f|
             .body__main__right__panel__post
-            = f.text_area :id,class: "text_area"
+            = f.text_area :second_body,class: "text_area"
             = f.submit :意見を投稿する,class: "body__main__right__panel__buttun"
 
 
