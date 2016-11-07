@@ -133,10 +133,10 @@
       .main__footer__body--posting.clearfix
       = form_for @thema do |f|
         .firstPosting
-          = f.text_area :id
+          = f.text_area :first_name
         .vs vs
         .secondPosting
-          = f.text_area :id
+          = f.text_area :second_name
         .submit
           = f.submit :投稿する,class: "submit__form"
     .main__footer--footer 投稿できるお題は各50文字以内です
