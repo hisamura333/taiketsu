@@ -131,7 +131,7 @@
     .main__footer__body
       .main__footer__body--title.clearfix ライバル関係にある２つの事柄を投稿してみてください
       .main__footer__body--posting.clearfix
-      = form_for @thema,html:{class: "main__footer__body--posting.clearfix"} do |f|
+      = form_for @thema do |f|
         .firstPosting
           = f.text_area :id
         .vs vs
