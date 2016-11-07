@@ -7,7 +7,7 @@
       .main__header--body-text いつも宿敵、ライバルとして憎み合い、争いあう二人。<br/>たまには言いたいことを遠慮なく吐き出してみませんか？
 
       .main__header--body-detail 
-        %a.button{:href => "http://localhost:3000/themas/1"} もっと詳しく
+        %a.button{:href => "http://taiketsu.co/about/"} もっと詳しく
       .link.clearfix
         .facebook
         %i.fa.fa-facebook 
@@ -20,14 +20,15 @@
     .main__body--raw.clearfix
       .main__body--raw-box
         - @themas.each do |thema|
-          .main__body--raw-box-panel
-            .main__body--raw-box-panel-firstName 
-              =thema.first_name
-            .main__body--raw-box-panel-vs vs
-            .main__body--raw-box-panel-secondName 
-              =thema.second_name
-            .main__body--raw-box-panel-firstChart 0
-            .main__body--raw-box-panel-secondChart 0
+          =link_to thema_path(thema.id) do
+            .main__body--raw-box-panel
+              .main__body--raw-box-panel-firstName 
+                =thema.first_name
+              .main__body--raw-box-panel-vs vs
+              .main__body--raw-box-panel-secondName 
+                =thema.second_name
+              .main__body--raw-box-panel-firstChart 0
+              .main__body--raw-box-panel-secondChart 0
 
 
     .pagination
@@ -46,7 +47,7 @@
           = f.text_area :second_name
         .submit
           = f.submit :投稿する,class: "submit__form"
-    .main__footer--footer 投稿できるお題は各50文字以内です
+    .main__footer__footer 投稿できるお題は各50文字以内です
 
 %footer
   .footer__body

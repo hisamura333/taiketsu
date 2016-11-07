@@ -5,7 +5,6 @@ class ThemasController < ApplicationController
   end
   def show
     @thema = Thema.find(params[:id])
-    @hema = Thema.new
   end
   def create
     @thema = Thema.create(create_params)
