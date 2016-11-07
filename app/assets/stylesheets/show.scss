@@ -1,0 +1,423 @@
+body {
+  background: #eeeeee;
+  color: #222222;
+  padding: 0;
+  margin: 0;
+  font-family: 'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,osaka,'ＭＳ Ｐゴシック',Arial,sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.5;
+  position: relative;
+  cursor: auto;
+}
+.header{
+  background: url("http://taiketsu.co/wp-content/themes/taiketsu/img/bg.jpg") #1f3748;
+  background-size: cover;
+  color: #ffffff;
+  padding: 20px 0;
+  height: 78px;
+  &__title{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    max-width: 60rem;
+    &__name{
+      font-size: 2rem;
+    }
+  }
+}
+.body{
+  padding: 20px 0;
+  overflow: auto;
+  .upper_themas{
+    margin-bottom: 10px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    max-width: 60rem;
+    .past__thema{
+    text-align: left !important;
+    width: 40%;
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
+    float: left;
+    }
+    .next__thema{
+    float: right;
+    text-align: right !important;
+    width: 40%;
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
+    }
+  }
+  &__header{
+    margin-bottom: 10px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    max-width: 60rem;
+    &__box{
+      margin-bottom: 10px;
+      text-align: center !important;
+      width: 100%;
+      position: relative;
+      padding-left: 0.625rem;
+      padding-right: 0.625rem;
+      float: left;
+      &__panel{
+        height: 180px;
+        transition: 0.4s;
+        background: #ffffff;
+        border: none;
+        box-shadow: 0 3px 5px #cccccc;
+        margin-bottom: 1.25rem;
+        padding: 0.875rem;
+        &__top{
+          padding-top: 20px;
+          margin-top: 0;
+          width: auto;
+          margin-left: -0.625rem;
+          margin-right: -0.625rem;
+          margin-bottom: 0;
+          max-width: none;
+          &--firstName{
+            font-size: 2rem;
+            width: 41.66667%;
+            position: relative;
+            padding-left: 0.625rem;
+            padding-right: 0.625rem;
+            float: left;
+          }
+          &--vs{
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 100%;
+            line-height: 2.5rem;
+            transition: 0.4s;
+            font-family: Arial,Helvetica,sans-serif;
+            text-align: center;
+            background: #1f3748;
+            color: #ffffff;
+            margin: 10px auto;
+          }
+          &--secondName{
+            margin-top: -55px;
+            font-size: 2rem;
+            width: 41.66667%;
+            position: relative;
+            padding-left: 0.625rem;
+            padding-right: 0.625rem;
+            float: right;
+          }
+        }
+        &__bottom{
+          padding-top: 20px;
+          margin-top: 30px;
+          border-top: 1px solid #e1e1e1;
+          width: auto;
+          margin-left: -0.625rem;
+          margin-right: -0.625rem;
+          max-width: none;
+          .facebook{
+          }
+          .twitter{
+          }
+          .fa-hatena {
+
+            &:before {
+              content: "B!";
+              font-family: Verdana;
+              font-weight: bold;
+              font-size: large;
+
+            }
+          }
+        }
+      }
+    }
+  }
+  &__main{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    max-width: 60rem;
+    &__left{
+      width: 47%;
+      position: relative;
+      padding-left: 0.625rem;
+      padding-right: 0.625rem;
+      float: left;
+      &__panel{
+        background: #ffffff;
+        border: none;
+        box-shadow: 0 3px 5px #cccccc;
+        margin-bottom: 1.25rem;
+        padding: 0.875rem;
+        color: #333333;
+        &__title{
+          width: auto;
+          margin-left: -0.625rem;
+          margin-right: -0.625rem;
+          margin-top: 0;
+          margin-bottom: 0;
+          max-width: none;
+        }
+        span{
+          color: #a35747;
+          font-size: 1.5rem;
+        }
+        &__comment{
+          background: #f0f0f0;
+          margin: 0 -0.875rem -1px;
+          padding: 10px 20px;
+          overflow: auto;
+          &__text{
+            width: 100%;
+            position: relative;
+            padding-left: 0.625rem;
+            padding-right: 0.625rem;
+            float: left;
+          }
+          &__good{
+            float: left;
+            margin-right: 1px;
+            padding: 4px 15px;
+            font-size: 0.8rem;
+            vertical-align: middle;
+            background: #bbbbbb;
+            color: #ffffff;
+            cursor: pointer;
+          }
+          &__bad{
+            float: right;
+            float: left;
+            margin-right: 1px;
+            padding: 4px 15px;
+            font-size: 0.8rem;
+            vertical-align: middle;
+            background: #bbbbbb;
+            color: #ffffff;
+            cursor: pointer;
+          }
+        }
+        &__comment:nth-child(even){
+          background: #fff;
+          margin: 0 -0.875rem -1px;
+          padding: 10px 20px;
+          overflow: auto;
+        }
+        &__post{
+          width: 100%;
+          position: relative;
+          padding-left: 0.625rem;
+          padding-right: 0.625rem;
+          float: left;
+        }
+        &__buttun{
+          box-shadow: none;
+          background: #bbbbbb;
+          border-radius: 1000px;
+          padding: 5px 50px;
+          color: #fff;
+          margin-left: 105px;
+          border: thin solid #bbbbbb;
+        }
+        #thema_id{
+          width: 100%;
+          border-color: #bbbbbb;
+        }
+      }
+    }
+    &__right{
+      width: 47%;
+      position: relative;
+      padding-left: 0.625rem;
+      padding-right: 0.625rem;
+      float: right;
+      &__panel{
+        background: #ffffff;
+        border: none;
+        box-shadow: 0 3px 5px #cccccc;
+        margin-bottom: 1.25rem;
+        padding: 0.875rem;
+        color: #333333;
+        &__title{
+          width: auto;
+          margin-left: -0.625rem;
+          margin-right: -0.625rem;
+          margin-top: 0;
+          margin-bottom: 0;
+          max-width: none;
+        }
+        &__comment{
+          background: #f0f0f0;
+          margin: 0 -0.875rem -1px;
+          padding: 10px 20px;
+          overflow: auto;
+          &__text{
+            width: 100%;
+            position: relative;
+            padding-left: 0.625rem;
+            padding-right: 0.625rem;
+            float: left;
+          }
+          &__good{
+            float: left;
+            margin-right: 1px;
+            padding: 4px 15px;
+            font-size: 0.8rem;
+            vertical-align: middle;
+            background: #bbbbbb;
+            color: #ffffff;
+            cursor: pointer;
+          }
+          &__bad{
+            float: right;
+            float: left;
+            margin-right: 1px;
+            padding: 4px 15px;
+            font-size: 0.8rem;
+            vertical-align: middle;
+            background: #bbbbbb;
+            color: #ffffff;
+            cursor: pointer;
+          }
+        }
+        &__comment:nth-child(even){
+          background: #fff;
+          margin: 0 -0.875rem -1px;
+          padding: 10px 20px;
+          overflow: auto;
+        }
+        &__post{
+          width: 100%;
+          position: relative;
+          padding-left: 0.625rem;
+          padding-right: 0.625rem;
+          float: left;
+        }
+        &__buttun{
+          box-shadow: none;
+          background: #bbbbbb;
+          border-radius: 1000px;
+          padding: 5px 50px;
+          color: #fff;
+          margin-left: 105px;
+          border: thin solid #bbbbbb;
+        }
+      }
+    }
+
+    &__right{
+      width: 47%;
+      position: relative;
+      padding-left: 0.625rem;
+      padding-right: 0.625rem;
+      float: right;
+      &__panel{
+        background: #ffffff;
+        border: none;
+        box-shadow: 0 3px 5px #cccccc;
+        margin-bottom: 1.25rem;
+        padding: 0.875rem;
+        color: #333333;
+        &__title{
+          width: auto;
+          margin-left: -0.625rem;
+          margin-right: -0.625rem;
+          margin-top: 0;
+          margin-bottom: 0;
+          max-width: none;
+        }
+        span{
+          color: #4f6996;
+          font-size: 1.5rem;
+        }
+        &__comment{
+          background: #f0f0f0;
+          margin: 0 -0.875rem -1px;
+          padding: 10px 20px;
+          overflow: auto;
+          &__text{
+            width: 100%;
+            position: relative;
+            padding-left: 0.625rem;
+            padding-right: 0.625rem;
+            float: left;
+          }
+          &__good{
+            float: left;
+            margin-right: 1px;
+            padding: 4px 15px;
+            font-size: 0.8rem;
+            vertical-align: middle;
+            background: #bbbbbb;
+            color: #ffffff;
+            cursor: pointer;
+          }
+          &__bad{
+            float: right;
+            float: left;
+            margin-right: 1px;
+            padding: 4px 15px;
+            font-size: 0.8rem;
+            vertical-align: middle;
+            background: #bbbbbb;
+            color: #ffffff;
+            cursor: pointer;
+          }
+        }
+        &__comment:nth-child(even){
+          background: #fff;
+          margin: 0 -0.875rem -1px;
+          padding: 10px 20px;
+          overflow: auto;
+        }
+        &__post{
+          width: 100%;
+          position: relative;
+          padding-left: 0.625rem;
+          padding-right: 0.625rem;
+          float: left;
+        }
+        &__buttun{
+          box-shadow: none;
+          background: #bbbbbb;
+          border-radius: 1000px;
+          padding: 5px 50px;
+          color: #fff;
+          margin-left: 105px;
+          border: thin solid #bbbbbb;
+        }
+        #thema_id{
+          width: 100%;
+          border-color: #bbbbbb;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
