@@ -4,7 +4,8 @@ class ThemasController < ApplicationController
     @themas = Thema.all
   end
   def show
-    @thema = Thema.new
+    @thema = Thema.find(params[:id])
+    @hema = Thema.new
   end
   def create
     @thema = Thema.create(create_params)

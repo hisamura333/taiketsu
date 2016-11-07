@@ -1,25 +1,30 @@
 %body
   .header
     .header__title
-      .header__title__name タイケツ
+      =link_to root_path do
+        .header__title__name タイケツ
 
   .body
     .upper_themas.clearfix
-      .past__thema 
-        %i.fa.fa-arrow-circle-left
-        aaa vs bbb
-      .next__thema 
-        111 vs 222
-        %i.fa.fa-arrow-circle-right
+      =link_to thema_path(@thema)do
+        .past__thema 
+          %i.fa.fa-arrow-circle-left
+          aaa vs bbb
+      =link_to thema_path(@thema)do
+        .next__thema 
+          111 vs 222
+          %i.fa.fa-arrow-circle-right
         
 
     .body__header
       .body__header__box
         .body__header__box__panel
           .body__header__box__panel__top
-            .body__header__box__panel__top--firstName マクドナルド
+            .body__header__box__panel__top--firstName 
+              =@thema.first_name
             .body__header__box__panel__top--vs vs
-            .body__header__box__panel__top--secondName スターバックス
+            .body__header__box__panel__top--secondName 
+              =@thema.second_name
           .body__header__box__panel__bottom
             .facebook
             %i.fa.fa-facebook 
@@ -32,7 +37,8 @@
       .body__main__left
         .body__main__left__panel
           .body__main__left__panel__title.clearfix
-          %span マクドナルド 
+          %span 
+            =@thema.first_name 
           からのご意見
           .body__main__left__panel__comment
             .body__main__left__panel__comment__text 普通
@@ -47,7 +53,7 @@
             .body__main__left__panel__comment__bad 
               %i.fa.fa-thumbs-o-down (0)
 
-          = form_for @thema do |f|
+          = form_for @hema do |f|
             .body__main__left__panel__post
             = f.text_area :id ,class: "text_area"
             = f.submit :意見を投稿する,class: "body__main__left__panel__buttun"
@@ -55,7 +61,8 @@
       .body__main__right
         .body__main__right__panel
           .body__main__right__panel__title
-          %span スターバックス 
+          %span 
+            =@thema.second_name
           からのご意見
           .body__main__right__panel__comment
             .body__main__right__panel__comment__text 普通
@@ -76,7 +83,7 @@
             = f.submit :意見を投稿する,class: "body__main__left__panel__buttun"
 
 
-        #p
+        投稿できるご意見は200文字以内です。
 
   .main__footer
     .main__footer__header
