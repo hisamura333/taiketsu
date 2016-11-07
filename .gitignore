@@ -1,0 +1,12 @@
+
+*.cache
+
+tmp/pids/server.pid
+
+tmp/pids/server.pid
+
+log/development.log
+
+log/development.log
+
+*.log
