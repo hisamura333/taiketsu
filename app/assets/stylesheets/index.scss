@@ -1,0 +1,273 @@
+//
+//Font Awesome hatena bookmark
+//
+
+.clearfix {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+
+body {
+  height: 100%;
+  background: #eeeeee;
+  color: #222222;
+  padding: 0;
+  margin: 0;
+  font-family: 'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,osaka,'ＭＳ Ｐゴシック',Arial,sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.5;
+  position: relative;
+  cursor: auto;
+}
+.main__header {
+  height: 530px;
+  background: url("http://taiketsu.co/wp-content/themes/taiketsu/img/bg.jpg") #1f3748;
+  background-size: cover;
+  color: #ffffff;
+  padding: 20px 0;
+  text-align: center;
+  &--title {
+    height: 217px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    max-width: 60rem;
+    &-name {
+      height: 57px;
+      margin-left: auto;
+      margin-right: auto;
+      float: none;
+    }
+      h1 {
+        font-size: 50px;
+        padding-top: 50px;
+      }
+  }
+  &--body{
+    height: 133px;
+    position: relative;
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
+    float: none;
+    &-text{
+      font-family: inherit;
+      font-weight: normal;
+      font-size: 20px;
+      line-height: 1.6;
+      margin-bottom: 1.25rem;
+      text-rendering: optimizeLegibility;
+    }
+    &-detail{
+      margin-left: auto;
+      margin-right: auto;
+      float: none;
+    }
+    .button{
+      background: #81b3ab;
+      border-radius: 1000px;
+      padding: 5px 50px;
+      color: #fff;
+    }
+    .link {
+      height: 90px;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 50px;
+      margin-bottom: 0;
+      max-width: 60rem;
+    }
+      .fa{
+        margin: 25px;
+        width:70px;
+        height:70px;
+        /* 背景色 */
+        background-color: url("http://taiketsu.co/wp-content/themes/taiketsu/img/bg.jpg") #1f3748;
+        /* 角を丸くする */
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        /* 外枠の線を定義 */
+        border: 1px solid #fff;
+
+
+      }
+      .facebook{
+        float: left;
+      }
+        .fa-facebook {
+
+          &:before {
+            font-size: -webkit-xxx-large;
+          }
+        }
+      .twitter{
+        float: left;
+      }
+        .fa-twitter {
+
+          &:before {
+            font-size: -webkit-xxx-large;
+          }
+        }
+      .hatena{
+        float: left;
+      }
+      .fa-hatena {
+
+        &:before {
+          content: "B!";
+          font-family: Verdana;
+          font-weight: bold;
+          font-size: -webkit-xxx-large;
+        }
+      }
+  }
+}
+.main__body{
+  padding: 20px 0;
+  box-sizing: border-box;
+  &--raw{
+    margin-bottom: 10px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    max-width: 60rem;
+    overflow: auto;
+    &-box{
+      padding-left: 0.625rem;
+      padding-right: 0.625rem;
+      float: left;
+      text-align: center !important;
+      &-panel{
+        float: left;
+        margin: 10px;
+        background: #fff;
+        transition: 0.4s;
+        border: none;
+        box-shadow: 0 3px 5px #cccccc;
+        width: 30%;
+        &-firstName{
+          font-size: 1.2rem;
+        }
+        &-vs{
+          width: 2.5rem;
+          height: 2.5rem;
+          border-radius: 100%;
+          line-height: 2.5rem;
+          transition: 0.4s;
+          font-family: Arial,Helvetica,sans-serif;
+          text-align: center;
+          background: #1f3748;
+          color: #ffffff;
+          margin: 10px auto;
+        }
+        &-secondName{
+          font-size: 1.2rem;
+        }
+        &-firstChart{
+          width: 50%;
+          background: #a35747;
+          float: left;
+          font-size: 0.8rem;
+          color: #ffffff;
+          margin: 0 0 5px;
+        }
+        &-secondChart{
+          width: 50%;
+          background: #4f6996;
+          float: left;
+          font-size: 0.8rem;
+          color: #ffffff;
+          margin: 0 0 5px;
+        }
+      }
+    }
+  }
+}
+.main__footer{
+  height: 308px;
+  background: url("http://taiketsu.co/wp-content/themes/taiketsu/img/bg.jpg") #1f3748;
+  background-size: cover;
+  color: #ffffff;
+  padding: 20px 0;
+  text-align: center;
+  &__header{
+    padding: 0 0.5rem;
+    width: 100%;
+    &--title{
+    margin-top: 0.2rem;
+    }
+  }
+  &__body{
+    padding: 0 0.5rem;
+    &--title{
+      font-family: inherit;
+      font-weight: normal;
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 1.25rem;
+      text-rendering: optimizeLegibility;
+    }
+    &--posting{
+      text-align: center;
+
+    }
+      .firstPosting{
+        background: none;
+        color: #ffffff;
+        
+
+      }
+      .vs{
+        font-family: inherit;
+        
+
+      }
+      .secondPosting{
+        background: none;
+        color: #ffffff;
+        
+
+      }
+        #thema_id{
+          background: transparent;
+          color: #fff;
+          font-size: 12px;
+          width: 35%;
+        }
+      .submit{
+        padding-top: 20px;
+      }
+        .submit__form{
+          background: #81b3ab;
+          border-radius: 1000px;
+          padding: 5px 50px;
+          color: #fff;
+        }
+
+  }
+  &__footer{
+    padding: 0 0.5rem;
+  }
+}
+
+footer {
+  height: 30px;
+  padding-top: 10px;
+  background: #222222;
+  color: #999999;
+}
+  li {
+    float: left;
+    margin: 0 5px;
+  }
+
+
