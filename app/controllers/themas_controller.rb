@@ -1,7 +1,7 @@
 class ThemasController < ApplicationController
   def index
     @thema = Thema.new
-    @themas = Thema.all
+    @themas = Thema.order("id DESC").page(params[:page]).per(12)
   end
   def show
     @new_thema = Thema.new
@@ -10,7 +10,7 @@ class ThemasController < ApplicationController
   end
   def create
     @thema = Thema.create(thema_params)
-    redirect_to root_path, notice: 'お題が作成されました！'
+    redirect_to thema_path(@thema.id), notice: 'お題が作成されました！'
   end
 
   private
