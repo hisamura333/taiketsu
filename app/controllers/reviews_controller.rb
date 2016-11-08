@@ -1,7 +1,7 @@
 class ReviewsController < ApplicationController
   def create
     Review.create(review_params)
-    redirect_to root_path
+    redirect_to thema_path(params[:thema_id])
   end
 
   private
