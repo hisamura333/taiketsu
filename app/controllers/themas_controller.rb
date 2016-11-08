@@ -4,6 +4,7 @@ class ThemasController < ApplicationController
     @themas = Thema.all
   end
   def show
+    @new_thema = Thema.new
     @thema = Thema.find(params[:id])
     @review = Review.new
   end
