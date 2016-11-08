@@ -202,6 +202,25 @@ body {
     }
   }
 }
+.pagination{
+  text-align: center;
+  padding: 10px 0;
+  span{
+    color: #222222;
+    font-size: 1.25rem;
+  }
+  a{
+    color: #999999;
+    background: none;
+    border-radius: 3px;
+    font-weight: normal;
+    font-size: 1em;
+    line-height: inherit;
+    transition: background-color 300ms;
+    margin: 0 10px;
+
+  }
+}
 .main__footer{
   height: 308px;
   background: url("http://taiketsu.co/wp-content/themes/taiketsu/img/bg.jpg") #1f3748;
