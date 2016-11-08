@@ -6,7 +6,7 @@
 
   .body
     .upper_themas.clearfix
-      - if @thema.previous.present?&& @thema.next.present?
+      - if @thema.previous.present? && @thema.next.present?
         =link_to thema_path(@thema.previous.id)do
           .past__thema 
             %i.fa.fa-arrow-circle-left
@@ -19,22 +19,20 @@
             vs
             =@thema.next.second_name
             %i.fa.fa-arrow-circle-right
-      - elsif @thema.previous.id.nil?
-        =link_to thema_path(@thema.previous.id)do
-          .past__thema 
-            %i.fa.fa-arrow-circle-left
-            =@thema.previous.first_name
-            vs
-            =@thema.previous.second_name
-      - elsif @thema.next.id.nil?
+      - elsif @thema.previous.nil?
         =link_to thema_path(@thema.next.id)do
           .next__thema 
             =@thema.next.first_name
             vs
             =@thema.next.second_name
             %i.fa.fa-arrow-circle-right
-
-
+      - elsif 
+        =link_to thema_path(@thema.previous.id)do
+          .past__thema 
+            %i.fa.fa-arrow-circle-left
+            =@thema.previous.first_name
+            vs
+            =@thema.previous.second_name
 
     .body__header
       .body__header__box
@@ -60,22 +58,18 @@
           %span 
             =@thema.first_name 
           からのご意見
-          .body__main__left__panel__comment
-            .body__main__left__panel__comment__text 普通
-            .body__main__left__panel__comment__good 
-              %i.fa.fa-thumbs-o-up (0)
-            .body__main__left__panel__comment__bad 
-              %i.fa.fa-thumbs-o-down (0)
-          .body__main__left__panel__comment 
-            .body__main__left__panel__comment__text.clearfix 美味しい
-            .body__main__left__panel__comment__good
-              %i.fa.fa-thumbs-o-up (0)
-            .body__main__left__panel__comment__bad 
-              %i.fa.fa-thumbs-o-down (0)
-
-          = form_for @thema do |f|
+          -@thema.reviews.each do|review|
+            -if review.first_body.present?
+              .body__main__left__panel__comment
+                .body__main__left__panel__comment__text 
+                  =review.first_body
+                .body__main__left__panel__comment__good 
+                  %i.fa.fa-thumbs-o-up (0)
+                .body__main__left__panel__comment__bad 
+                  %i.fa.fa-thumbs-o-down (0)
+          = form_for [@thema,@review] do |f|
             .body__main__left__panel__post
-            = f.text_area :id ,class: "text_area"
+            = f.text_area :first_body ,class: "text_area"
             = f.submit :意見を投稿する,class: "body__main__left__panel__buttun"
 
       .body__main__right
@@ -84,22 +78,20 @@
           %span 
             =@thema.second_name
           からのご意見
-          .body__main__right__panel__comment
-            .body__main__right__panel__comment__text 普通
-            .body__main__right__panel__comment__good 
-              %i.fa.fa-thumbs-o-up (0)
-            .body__main__right__panel__comment__bad 
-              %i.fa.fa-thumbs-o-down (0)
-          .body__main__right__panel__comment 
-            .body__main__right__panel__comment__text.clearfix 美味しい
-            .body__main__right__panel__comment__good 
-              %i.fa.fa-thumbs-o-up (0)
-            .body__main__right__panel__comment__bad 
-              %i.fa.fa-thumbs-o-down (0)
+          -@thema.reviews.each do|review|
+            -if review.second_body.present?
+              .body__main__right__panel__comment
+                .body__main__right__panel__comment__text 
+                  =review.second_body
+                .body__main__right__panel__comment__good 
+                  %i.fa.fa-thumbs-o-up (0)
+                .body__main__right__panel__comment__bad 
+                  %i.fa.fa-thumbs-o-down (0)
 
-          = form_for @thema do |f|
+
+          = form_for [@thema,@review] do |f|
             .body__main__right__panel__post
-            = f.text_area :id,class: "text_area"
+            = f.text_area :second_body,class: "text_area"
             = f.submit :意見を投稿する,class: "body__main__right__panel__buttun"
 
 
@@ -111,15 +103,15 @@
     .main__footer__body
       .main__footer__body--title.clearfix ライバル関係にある２つの事柄を投稿してみてください
       .main__footer__body--posting.clearfix
-      = form_for @thema,html:{class: "main__footer__body--posting.clearfix"} do |f|
+      = form_for @new_thema do |f|
         .firstPosting
-          = f.text_area :id
+          = f.text_area :first_name, placeholder: ""
         .vs vs
         .secondPosting
-          = f.text_area :id
+          = f.text_area :second_name, placeholder: ""
         .submit
           = f.submit :投稿する,class: "submit__form"
-    .main__footer--footer 投稿できるお題は各50文字以内です
+    .main__footer__footer 投稿できるお題は各50文字以内です
 
 %footer
   .footer__body

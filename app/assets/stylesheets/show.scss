@@ -207,7 +207,7 @@ body {
             cursor: pointer;
           }
         }
-        &__comment:nth-child(even){
+        &__comment:nth-child(2n){
           background: #fff;
           margin: 0 -0.875rem -1px;
           padding: 10px 20px;
@@ -228,6 +228,10 @@ body {
           color: #fff;
           margin-left: 105px;
           border: thin solid #bbbbbb;
+        }
+        #review_first_body {
+          font-size: 2rem;
+          width: 100%;
         }
         #thema_id{
           width: 100%;
@@ -311,6 +315,10 @@ body {
           color: #fff;
           margin-left: 105px;
           border: thin solid #bbbbbb;
+        }
+        #review_second_body {
+          font-size: 2rem;
+          width: 100%;
         }
       }
     }
