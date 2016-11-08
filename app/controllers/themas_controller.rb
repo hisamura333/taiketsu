@@ -10,7 +10,7 @@ class ThemasController < ApplicationController
   end
   def create
     @thema = Thema.create(thema_params)
-    redirect_to root_path
+    redirect_to root_path, notice: 'お題が作成されました！'
   end
 
   private

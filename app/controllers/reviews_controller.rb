@@ -1,7 +1,7 @@
 class ReviewsController < ApplicationController
   def create
     Review.create(review_params)
-    redirect_to thema_path(params[:thema_id])
+    redirect_to thema_path(params[:thema_id]),notice: '意見が投稿されました！'
   end
 
   private
