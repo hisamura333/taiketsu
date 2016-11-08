@@ -2,7 +2,9 @@
   .header
     .header__title
       =link_to root_path do
-        .header__title__name タイケツ
+        .header__title__name 
+
+
 
   .body
     .upper_themas.clearfix
@@ -93,8 +95,6 @@
             .body__main__right__panel__post
             = f.text_area :second_body,class: "text_area"
             = f.submit :意見を投稿する,class: "body__main__right__panel__buttun"
-
-
         投稿できるご意見は200文字以内です。
 
   .main__footer

@@ -15,16 +15,13 @@
   text-align: center;
   height: 28px;
   margin: 0 15rem;
-
 }
-
-
 body {
   height: 100%;
   background: #eeeeee;
   color: #222222;
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
   font-family: 'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,osaka,'ＭＳ Ｐゴシック',Arial,sans-serif;
   font-weight: normal;
   font-style: normal;
@@ -47,16 +44,13 @@ body {
     margin-top: 0;
     margin-bottom: 0;
     max-width: 60rem;
+
     &-name {
       height: 57px;
-      margin-left: auto;
-      margin-right: auto;
+      margin: 4% 0 0 32%;
       float: none;
+      background: url("http://taiketsu.co/wp-content/themes/taiketsu/img/logo.png") no-repeat;
     }
-      h1 {
-        font-size: 50px;
-        padding-top: 50px;
-      }
   }
   &--body{
     height: 133px;
