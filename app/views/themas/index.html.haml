@@ -26,10 +26,12 @@
               .main__body--raw-box-panel-vs vs
               .main__body--raw-box-panel-secondName 
                 =thema.second_name
-              .main__body--raw-box-panel-firstChart 0
-              .main__body--raw-box-panel-secondChart 0
+              .main__body--raw-box-panel-firstChart
+                =thema.reviews.count(:first_body)
+              .main__body--raw-box-panel-secondChart 
+                =thema.reviews.count(:second_body)
   .pagination
-    = paginate @themas
+    -# = paginate @themas
 
   .main__footer
     .main__footer__header
