@@ -2,7 +2,6 @@
   .main__header
     .main__header--title
       .main__header--title-name
-        %h1 タイケツ
     .main__header--body
       .main__header--body-text いつも宿敵、ライバルとして憎み合い、争いあう二人。<br/>たまには言いたいことを遠慮なく吐き出してみませんか？
 
@@ -27,10 +26,12 @@
               .main__body--raw-box-panel-vs vs
               .main__body--raw-box-panel-secondName 
                 =thema.second_name
-              .main__body--raw-box-panel-firstChart 0
-              .main__body--raw-box-panel-secondChart 0
+              .main__body--raw-box-panel-firstChart
+                =thema.reviews.count(:first_body)
+              .main__body--raw-box-panel-secondChart 
+                =thema.reviews.count(:second_body)
   .pagination
-    = paginate @themas
+    -# = paginate @themas
 
   .main__footer
     .main__footer__header

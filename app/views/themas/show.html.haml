@@ -2,37 +2,37 @@
   .header
     .header__title
       =link_to root_path do
-        .header__title__name タイケツ
+        .header__title__name 
 
   .body
     .upper_themas.clearfix
       - if @thema.previous.present? && @thema.next.present?
-        =link_to thema_path(@thema.previous.id)do
-          .past__thema 
-            %i.fa.fa-arrow-circle-left
-            =@thema.previous.first_name
-            vs
-            =@thema.previous.second_name
         =link_to thema_path(@thema.next.id)do
           .next__thema 
+            %i.fa.fa-arrow-circle-left
             =@thema.next.first_name
             vs
             =@thema.next.second_name
+        =link_to thema_path(@thema.previous.id)do
+          .past__thema 
+            =@thema.previous.first_name
+            vs
+            =@thema.previous.second_name
             %i.fa.fa-arrow-circle-right
       - elsif @thema.previous.nil?
         =link_to thema_path(@thema.next.id)do
-          .next__thema 
+          .next__thema
+            %i.fa.fa-arrow-circle-left
             =@thema.next.first_name
             vs
             =@thema.next.second_name
-            %i.fa.fa-arrow-circle-right
       - elsif 
         =link_to thema_path(@thema.previous.id)do
           .past__thema 
-            %i.fa.fa-arrow-circle-left
             =@thema.previous.first_name
             vs
             =@thema.previous.second_name
+            %i.fa.fa-arrow-circle-right
 
     .body__header
       .body__header__box
@@ -93,8 +93,6 @@
             .body__main__right__panel__post
             = f.text_area :second_body,class: "text_area"
             = f.submit :意見を投稿する,class: "body__main__right__panel__buttun"
-
-
         投稿できるご意見は200文字以内です。
 
   .main__footer
