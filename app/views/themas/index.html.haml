@@ -18,7 +18,7 @@
   .main__body
     .main__body--raw.clearfix
       .main__body--raw-box
-        - @themas.each do |thema|
+        - @ranking.each do |thema|
           =link_to thema_path(thema.id) do
             .main__body--raw-box-panel
               .main__body--raw-box-panel-firstName 
