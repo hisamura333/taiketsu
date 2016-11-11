@@ -158,8 +158,10 @@ body {
         box-shadow: 0 3px 5px #cccccc;
         width: 30%;
         min-width: 220px;
+        color: #1f3748;
         &-firstName{
           font-size: 1.2rem;
+          color: #1f3748;
         }
         &-vs{
           width: 2.5rem;
@@ -175,6 +177,7 @@ body {
         }
         &-secondName{
           font-size: 1.2rem;
+          color: #1f3748;
         }
         &-firstChart{
           width: 50%;
