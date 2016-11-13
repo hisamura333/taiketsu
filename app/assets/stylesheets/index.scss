@@ -179,21 +179,25 @@ body {
           font-size: 1.2rem;
           color: #1f3748;
         }
-        &-firstChart{
-          width: 50%;
-          background: #a35747;
-          float: left;
-          font-size: 0.8rem;
-          color: #ffffff;
-          margin: 0 0 5px;
-        }
-        &-secondChart{
-          width: 50%;
-          background: #4f6996;
-          float: left;
-          font-size: 0.8rem;
-          color: #ffffff;
-          margin: 0 0 5px;
+        &-chart{
+          overflow: hidden;
+          margin: 0 auto;
+          border-radius: 0.5em;
+          width: 90%;
+          &-firstChart{
+            background: #a35747;
+            float: left;
+            font-size: 0.8rem;
+            color: #ffffff;
+            margin: 0 0 5px;
+          }
+          &-secondChart{
+            background: #4f6996;
+            float: left;
+            font-size: 0.8rem;
+            color: #ffffff;
+            margin: 0 0 5px;
+          }
         }
       }
     }
