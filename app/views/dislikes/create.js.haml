@@ -1,0 +1,5 @@
+-if @review.first_body.present?
+  $(".count_first_dislikes").eq(#{@index}).html("#{j(render partial: 'dislike', locals: { thema: @thema,review: @review, dislikes: @dislikes, dislike: @dislike, index: @index})}")
+
+-else
+  $(".count_second_dislikes").eq(#{@index}).html("#{j(render partial: 'dislike', locals: { thema: @thema,review: @review, dislikes: @dislikes, dislike: @dislike, index: @index})}")
