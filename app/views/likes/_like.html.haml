@@ -1,0 +1,6 @@
+= button_to thema_review_likes_path(@thema,review), id: "like-button",class: "count__likes",name: "index",value: index,remote: true do
+  - if review.likes_count.present?
+    %i.fa.fa-thumbs-o-up 
+    = review.likes_count 
+  - else
+    %i.fa.fa-thumbs-o-up (0)
