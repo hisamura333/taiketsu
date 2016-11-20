@@ -60,15 +60,17 @@
           %span 
             =@thema.first_name 
           からのご意見
-          -@thema.reviews.each do|review|
+          -@review_first_bodys.each_with_index do|review,i|
             -if review.first_body.present?
               .body__main__left__panel__comment
                 .body__main__left__panel__comment__text 
                   =review.first_body
-                .body__main__left__panel__comment__good 
-                  %i.fa.fa-thumbs-o-up (0)
-                .body__main__left__panel__comment__bad 
-                  %i.fa.fa-thumbs-o-down (0)
+                  = i
+                  .count_first_likes
+                    = render :partial => "likes/like",:locals =>{review:review, thema: @thema,index: i}
+                  .count_first_dislikes
+                    = render :partial => "dislikes/dislike",:locals =>{review:review, thema: @thema,index: i}
+
           = form_for [@thema,@review] do |f|
             .body__main__left__panel__post
             = f.text_area :first_body ,class: "text_area"
@@ -80,20 +82,20 @@
           %span 
             =@thema.second_name
           からのご意見
-          -@thema.reviews.each do|review|
+          -@review_second_bodys.each_with_index do|review,i|
             -if review.second_body.present?
               .body__main__right__panel__comment
                 .body__main__right__panel__comment__text 
                   =review.second_body
-                .body__main__right__panel__comment__good 
-                  %i.fa.fa-thumbs-o-up (0)
-                .body__main__right__panel__comment__bad 
-                  %i.fa.fa-thumbs-o-down (0)
-
+                  = i
+                  .count_second_likes
+                    = render :partial => "likes/like",:locals =>{review:review, thema: @thema,index: i}
+                  .count_second_dislikes
+                    = render :partial => "dislikes/dislike",:locals =>{review:review, thema: @thema,index: i}
 
           = form_for [@thema,@review] do |f|
             .body__main__right__panel__post
-            = f.text_area :second_body,class: "text_area"
+            = f.text_area :second_body ,class: "text_area"
             = f.submit :意見を投稿する,class: "body__main__right__panel__buttun"
         投稿できるご意見は200文字以内です。
 

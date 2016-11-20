@@ -1,0 +1,6 @@
+= button_to thema_review_dislikes_path(@thema,review), id: "dislike-button",class: "count__dislikes",name: "index",value: index,remote: true do
+  - if review.dislikes_count.present?
+    %i.fa.fa-thumbs-o-down 
+    = review.dislikes_count 
+  - else
+    %i.fa.fa-thumbs-o-down (0)
