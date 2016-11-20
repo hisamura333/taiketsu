@@ -418,7 +418,29 @@ body {
   }
 }
 
+.count__likes{
+  float: left;
+  margin-right: 1px;
+  padding: 4px 15px;
+  font-size: 0.8rem;
+  vertical-align: middle;
+  background: #bbbbbb;
+  color: #ffffff;
+  cursor: pointer;
+  border-color: white;
+}
 
+.count__dislikes{
+  float: left;
+  margin-right: 1px;
+  padding: 4px 15px;
+  font-size: 0.8rem;
+  vertical-align: middle;
+  background: #bbbbbb;
+  color: #ffffff;
+  cursor: pointer;
+  border-color: white;
+}
 
 
 
