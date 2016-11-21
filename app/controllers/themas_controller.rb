@@ -3,7 +3,8 @@ class ThemasController < ApplicationController
     @thema = Thema.new
     thema_ids = Review.group(:thema_id).order('count_thema_id DESC').count(:thema_id).keys
 
-    @ranking = thema_ids.map { |id| Thema.find(id)}
+    @ranking = thema_ids.map{ |id| Thema.find(id)}
+
     @themas = Thema.all
 
     @themas.each do |thema|
@@ -11,6 +12,8 @@ class ThemasController < ApplicationController
         @ranking << thema
       end
     end
+
+    @ranking_page = Kaminari.paginate_array(@ranking).page(params[:page]).per(12)
   end
   def show
     @new_thema = Thema.new

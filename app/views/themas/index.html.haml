@@ -17,7 +17,7 @@
   .main__body
     .main__body--raw.clearfix
       .main__body--raw-box
-        - @ranking.each do |thema|
+        - @ranking_page.each do |thema|
           =link_to thema_path(thema.id) do
             .main__body--raw-box-panel
               .main__body--raw-box-panel-firstName 
@@ -39,7 +39,7 @@
                     =thema.reviews.count(:second_body)
 
   .pagination
-    -# = paginate @themas
+    = paginate @ranking_page
 
   .main__footer
     .main__footer__header
