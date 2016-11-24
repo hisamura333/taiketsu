@@ -14,14 +14,17 @@ class ThemasController < ApplicationController
     end
 
     @ranking_page = Kaminari.paginate_array(@ranking).page(params[:page]).per(12)
+    @themas_new = Thema.order('created_at DESC').limit(5)
+    @reviews_popular = Review.order("likes_count - dislikes_count DESC").limit(10)
+
   end
   def show
     @new_thema = Thema.new
     @thema = Thema.find(params[:id])
     @review = Review.new
     @like = Like.new
-    @review_first_bodys = @thema.reviews.where("second_body":nil)
-    @review_second_bodys = @thema.reviews.where("first_body":nil)
+    @review_first_bodys = @thema.reviews.where("second_body":nil).order("likes_count - dislikes_count DESC")
+    @review_second_bodys = @thema.reviews.where("first_body":nil).order("likes_count - dislikes_count DESC")
 
 
     thema_ids = Review.group(:thema_id).order('count_thema_id DESC').count(:thema_id).keys

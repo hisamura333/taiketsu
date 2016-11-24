@@ -65,7 +65,6 @@
               .body__main__left__panel__comment
                 .body__main__left__panel__comment__text 
                   =review.first_body
-                  = i
                   .count_first_likes
                     = render :partial => "likes/like",:locals =>{review:review, thema: @thema,index: i}
                   .count_first_dislikes
@@ -87,7 +86,6 @@
               .body__main__right__panel__comment
                 .body__main__right__panel__comment__text 
                   =review.second_body
-                  = i
                   .count_second_likes
                     = render :partial => "likes/like",:locals =>{review:review, thema: @thema,index: i}
                   .count_second_dislikes

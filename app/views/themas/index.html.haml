@@ -13,6 +13,40 @@
         %i.fa.fa-twitter
         .hatena
         %i.fa.fa-hatena
+      .main__header--body-all
+        すべてのテーマ
+        .main__header--body-thema
+          - @themas.each do |thema|
+            .main__header--body-thema-title
+            =link_to thema_path(thema.id) do
+              = thema.first_name
+            vs
+            = thema.second_name
+      .main__header--body-new
+        新着のテーマ
+        .main__header--body-new-thema
+          - @themas_new.each do |thema|
+            .main__header--body-new-thema-title
+            =link_to thema_path(thema.id) do
+              = thema.first_name
+            VS
+            = thema.second_name
+      .main__header--body-review
+        人気のレビュー
+        .main__header--body-review-popular
+          - @reviews_popular.each.with_index(1) do |review,i|
+            .main__header--body-review-popular-title
+            =link_to thema_path(review.thema.id) do
+              - if review.first_body.present?
+                = i 
+                位
+                = review.first_body
+              - if review.second_body.present?
+                = i 
+                位
+                = review.second_body
+
+
 
   .main__body
     .main__body--raw.clearfix
