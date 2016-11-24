@@ -88,7 +88,7 @@ body {
       .fa{
         margin: 25px;
         width:70px;
-        height:70px;
+        height:50px;
         /* 背景色 */
         background-color: url("http://taiketsu.co/wp-content/themes/taiketsu/img/bg.jpg") #1f3748;
         /* 角を丸くする */
@@ -130,6 +130,69 @@ body {
           font-size: -webkit-xxx-large;
         }
       }
+    &-all{
+      color: #1f3748;
+      border-color: white;
+      width: 30%;
+      // border-radius: 100px;
+      background-color: #a35747;
+      margin-left: 5%;
+      cursor: pointer;
+      float: left;
+    }
+    &-thema{
+      display: none;
+      background-color: snow;
+      width: 29%;
+      margin: 2px auto;
+      // border-radius: 10px;
+      box-shadow: 0 3px 5px #cccccc;
+      opacity: 0.95;
+      position: absolute;
+      &-title{
+        // display: none;
+      }
+    }
+    &-new{
+      color: #1f3748;
+      border-color: white;
+      width: 30%;
+      // border-radius: 100px;
+      background-color: white;
+      margin-left: 5px;
+      cursor: pointer;
+      float: left;
+      &-thema{
+        display: none;
+        background-color: snow;
+        width: 29%;
+        margin: 2px auto;
+        // border-radius: 10px;
+        box-shadow: 0 3px 5px #cccccc;
+        opacity: 0.95;
+        position: absolute;
+      }
+    }
+    &-review{
+      color: #1f3748;
+      border-color: white;
+      width: 30%;
+      // border-radius: 100px;
+      background-color: #4f6996;
+      margin-left: 5px;
+      cursor: pointer;
+      float: left;
+      &-popular{
+        display: none;
+        background-color: snow;
+        width: 29%;
+        margin: 2px auto;
+        // border-radius: 10px;
+        box-shadow: 0 3px 5px #cccccc;
+        opacity: 0.95;
+        position: absolute;
+      }
+    }
   }
 }
 .main__body{
