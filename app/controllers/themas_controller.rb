@@ -38,7 +38,12 @@ class ThemasController < ApplicationController
   end
   def create
     @thema = Thema.create(thema_params)
-    redirect_to thema_path(@thema.id), notice: 'お題が作成されました！'
+
+    if @thema.save
+      redirect_to thema_path(@thema.id), notice: 'お題が作成されました！'
+    else
+      redirect_to root_path, alert: '空欄のため、お題が作成されません！'
+    end
   end
 
   private
