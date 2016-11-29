@@ -109,21 +109,21 @@
       .main__footer__body--posting.clearfix
       = form_for @new_thema do |f|
         .firstPosting
-          = f.text_area :first_name, placeholder: ""
+          = f.text_area :first_name,class: 'first_post', placeholder: ""
         .vs vs
         .secondPosting
-          = f.text_area :second_name, placeholder: ""
+          = f.text_area :second_name, class: 'second_post',placeholder: ""
         .submit
           = f.submit :投稿する,class: "submit__form"
     .main__footer__footer 投稿できるお題は各50文字以内です
 
 %footer
   .footer__body
-    %ul.nav.clearfix
-      %li トップページ
-      %li タイケツの楽しみ方
-      %li 利用規約・免責事項
-      %li お問い合わせ
-      %li © TAIKETSU
+    .nav.clearfix
+      .nav__menu トップページ
+      .nav__menu タイケツの楽しみ方
+      .nav__menu 利用規約・免責事項
+      .nav__menu お問い合わせ
+      .nav__menu © TAIKETSU
 
 

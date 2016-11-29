@@ -16,6 +16,15 @@
   height: 28px;
   margin: 0 15rem;
 }
+.alert {
+  background: red;
+  border-radius: 1000px;
+  padding: 5px 50px;
+  color: #fff;
+  text-align: center;
+  height: 28px;
+  margin: 0 15rem;
+}
 body {
   height: 100%;
   background: #eeeeee;
@@ -84,6 +93,8 @@ body {
       margin-top: 50px;
       margin-bottom: 0;
       max-width: 60rem;
+      padding-bottom: 15px;
+
     }
       .fa{
         margin: 25px;
@@ -97,7 +108,7 @@ body {
         -moz-border-radius: 50%;
         /* 外枠の線を定義 */
         border: 1px solid #fff;
-
+        padding-top: 20px;
 
       }
       .facebook{
@@ -106,7 +117,7 @@ body {
         .fa-facebook {
 
           &:before {
-            font-size: -webkit-xxx-large;
+            font-size: large;
           }
         }
       .twitter{
@@ -115,7 +126,7 @@ body {
         .fa-twitter {
 
           &:before {
-            font-size: -webkit-xxx-large;
+            font-size: large;
           }
         }
       .hatena{
@@ -127,7 +138,7 @@ body {
           content: "B!";
           font-family: Verdana;
           font-weight: bold;
-          font-size: -webkit-xxx-large;
+          font-size: large;
         }
       }
     &-all{
@@ -337,17 +348,18 @@ body {
         padding-top: 20px;
       }
         .submit__form{
-          background: #81b3ab;
+          background: #4e8078;
           border-radius: 1000px;
           padding: 5px 50px;
           color: #fff;
-          border-color: #81b3ab;
+          border-color: #4e8078;
           box-shadow: none;
         }
 
   }
   &__footer{
     padding: 10px 0.5rem;
+
   }
 }
 
@@ -356,11 +368,15 @@ footer {
   padding-top: 10px;
   background: #222222;
   color: #999999;
+  font-size: 14px
 
 }
-  li {
+  .nav {
     float: left;
-    margin: 0 5px;
+    margin: 0 20px;
+    &__menu{
+      margin: 0 75px;
+      float: left;;
+    }
   }
-
 
