@@ -1,0 +1,2 @@
+$(".main__body--raw-box").append("#{escape_javascript(render 'rankings', object: @ranking_page)}");
+$("#more_link").replaceWith("#{escape_javascript( link_to_next_page(@ranking_page, 'more', remote: true, id: 'more_link'))}");
