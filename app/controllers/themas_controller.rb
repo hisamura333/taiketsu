@@ -13,8 +13,10 @@ class ThemasController < ApplicationController
       end
     end
 
-    @ranking_page = Kaminari.paginate_array(@ranking).page(params[:page]).per(12)
+    @ranking_page = Kaminari.paginate_array(@ranking).page(params[:page]).per(6)
+
     @themas_new = Thema.order('created_at DESC').limit(5)
+
     @reviews_popular = Review.order("likes_count - dislikes_count DESC").limit(10)
 
   end

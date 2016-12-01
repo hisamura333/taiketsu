@@ -1,0 +1,20 @@
+- @ranking_page.each do |thema|
+  =link_to thema_path(thema.id) do
+    .main__body--raw-box-panel
+      .main__body--raw-box-panel-firstName 
+        =thema.first_name
+      .main__body--raw-box-panel-vs vs
+      .main__body--raw-box-panel-secondName 
+        =thema.second_name
+      .main__body--raw-box-panel-chart
+        -if thema.reviews.count > 0
+          .main__body--raw-box-panel-chart-firstChart{:style => "width: #{thema.reviews.count(:first_body) / thema.reviews.count(:thema_id).to_f*100}%;"}
+            =thema.reviews.count(:first_body)
+          .main__body--raw-box-panel-chart-secondChart{:style => "width: #{thema.reviews.count(:second_body) / thema.reviews.count(:thema_id).to_f*100}%;"}
+            =thema.reviews.count(:second_body)
+
+        - elsif thema.reviews.count == 0
+          .main__body--raw-box-panel-chart-firstChart{:style => "width: 50%;"}
+            =thema.reviews.count(:first_body)
+          .main__body--raw-box-panel-chart-secondChart{:style => "width: 50%;"}
+            =thema.reviews.count(:second_body)
