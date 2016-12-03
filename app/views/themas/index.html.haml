@@ -56,29 +56,6 @@
   .pagination
     = link_to_next_page @ranking_page, 'more', remote: true, id: 'more_link'
 
-  .main__footer
-    .main__footer__header
-      .main__footer__header--title お題を投稿する
-    .main__footer__body
-      .main__footer__body--title.clearfix ライバル関係にある２つの事柄を投稿してみてください
-      .main__footer__body--posting.clearfix
-      = form_for @thema do |f|
-        .firstPosting
-          = f.text_area :first_name, class: 'first_post', placeholder: ""
-        .vs vs
-        .secondPosting
-          = f.text_area :second_name, class: 'second_post',placeholder: ""
-        .submit
-          = f.submit :投稿する,class: "submit__form"
-    .main__footer__footer 投稿できるお題は各50文字以内です
-
-%footer
-  .footer__body
-    .nav.clearfix
-      .nav__menu トップページ
-      .nav__menu タイケツの楽しみ方
-      .nav__menu 利用規約・免責事項
-      .nav__menu お問い合わせ
-      .nav__menu © TAIKETSU
+= render 'footer'
 
 

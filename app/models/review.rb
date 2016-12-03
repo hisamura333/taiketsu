@@ -10,4 +10,6 @@ class Review < ApplicationRecord
     dislikes.find_by(user_id: user_id)
     
   end
+
+  scope :subtraction, -> {order("likes_count - dislikes_count DESC")}
 end
