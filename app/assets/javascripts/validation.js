@@ -1,3 +1,4 @@
+//２つの投稿欄が埋まらないと送信できない
 $(function(){
   if ($('.first_post').val().length ==0 || $('.second_post').val().length ==0){
     $('.submit__form').attr('disabled', 'disabled');
