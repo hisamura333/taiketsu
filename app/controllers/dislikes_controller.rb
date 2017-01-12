@@ -7,13 +7,6 @@ class DislikesController < ApplicationController
     @index = params[:index]
   end
 
-  def destroy
-    dislike = Dislike.find_by(user_id: current_user.id, review_id: params[:review_id])
-    dislike.destroy
-    @dislikes = Dislike.where(review_id: params[:review_id])
-    @review = Review.all
-  end
-
   private 
   def create_params
     params.permit(:review_id,:index)

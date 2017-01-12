@@ -1,0 +1,40 @@
+-# @rankingはreviewの多いthemaの配列
+- @ranking.each_with_index do |rank,i|
+  .upper_themas.clearfix
+
+    -# 前と後のthemaが存在する場合
+    - if rank == @thema && @less_reviews_thema.present? && @more_reviews_thema.present? && i != 0
+
+      -# 前のthema表示
+      =link_to thema_path(@more_reviews_thema.id)do
+        .next__thema 
+          %i.fa.fa-arrow-circle-left
+          =@more_reviews_thema.first_name
+          vs
+          =@more_reviews_thema.second_name
+
+      -# 後のthema表示
+      =link_to thema_path(@less_reviews_thema.id)do
+        .past__thema 
+          =@less_reviews_thema.first_name
+          vs
+          =@less_reviews_thema.second_name
+          %i.fa.fa-arrow-circle-right
+
+      -# 前のthemaが存在する場合
+    - elsif @less_reviews_thema.nil? && rank == @thema
+      =link_to thema_path(@more_reviews_thema.id)do
+        .next__thema
+          %i.fa.fa-arrow-circle-left
+          =@more_reviews_thema.first_name
+          vs
+          =@more_reviews_thema.second_name
+
+      -# 後のthemaが存在する場合
+    - elsif i == 0 && rank == @thema
+      =link_to thema_path(@less_reviews_thema.id)do
+        .past__thema 
+          =@less_reviews_thema.first_name
+          vs 
+          =@less_reviews_thema.second_name
+          %i.fa.fa-arrow-circle-right
